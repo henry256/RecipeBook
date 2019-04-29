@@ -12,24 +12,25 @@ import Foundation
 
 class RecipeDetail {
     
-    struct recipeInfo{
-        var imageURL: String
-        var recipeURL: String
-        var recipeName: String
-        var servings: Double
-    }
-    
     struct nutrient{
         var nutrientName: String
         var amount: Double
         var unit: String
     }
-    var ingredient: String
     
-    var nutrientsArray = [nutrient]()
-    var ingredientAraay = [ingredient]()
     
-    var recipeID: String
+    struct recipeInfo{
+        var imageURL: String
+        var recipeURL: String
+        var recipeName: String
+        var servings: Double
+        var calories: Double
+        var nutrientsArray = [nutrient]()
+        var ingredientArray = [String]()
+    }
+    
+   
+
     
     func getRecipeDetail(completed: @escaping () -> ()){
         let
